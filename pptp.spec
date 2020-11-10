@@ -1,6 +1,6 @@
 Name:         pptp
 Version:      1.10.0
-Release:      6
+Release:      7
 Summary:      Point-to-Point Tunneling Protocol (PPTP) Client
 License:      GPLv2+
 URL:          http://pptpclient.sourceforge.net/
@@ -8,6 +8,7 @@ Source0:      http://downloads.sf.net/pptpclient/pptp-%{version}.tar.gz
 Source1:      pptp-tmpfs.conf
 BuildRequires:gcc perl-generators perl-podlators
 Requires:     ppp >= 2.4.2 iproute systemd-units
+Requires:     %{name}-help = %{version}-%{release}
 Provides:     pptp-setup
 Obsoletes:    pptp-setup
 
@@ -50,5 +51,8 @@ install -p -m 644 %{SOURCE1} %{buildroot}%{_prefix}/lib/tmpfiles.d/pptp.conf
 %{_mandir}/man8/pptp.8*
 %{_mandir}/man8/pptpsetup.8*
 %changelog
+* Fri Nov 06 2020 caodongxia <caodongxia@huawei.com> - 1.10.0-7
+- Add install requires help package into main package 
+
 * Fri Feb 14 2020 Senlin Xia <xiasenlin1@huawei.com> - 1.10.0-6
 - Pakcage init
