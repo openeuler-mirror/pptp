@@ -1,0 +1,10 @@
+--- a/Makefile	2018-01-18 08:12:00.000000000 +0800
++++ b/Makefile	2023-04-11 17:03:33.320019865 +0800
+@@ -14,7 +14,6 @@
+ MANDIR=$(DESTDIR)/usr/share/man/man8
+ PPPDIR=$(DESTDIR)/etc/ppp
+ 
+-CC	= gcc
+ RM	= rm -f
+ OPTIMIZE= -O -Wuninitialized
+ DEBUG	= -g
